@@ -14,8 +14,8 @@
     <!-- Header Starts-->
     <div class="header">
         <div class="header__right">
-            <button>Search</button>
-            <button>Advanced Search</button>
+            <button onclick="button1()">Search</button>
+            <button onclick="button2()">Advanced Search</button>
           </div>
     </div>
     <!-- Header Ends -->
@@ -46,6 +46,16 @@
     
       var answ = document.querySelector('#ans');
     
+      function button1()
+        {
+            window.location.href = "file:///C:/Users/HP/Desktop/Month%20Of%20Mern/Week-0-Challenge/webpages/search.html.html";
+        }
+
+        function button2()
+        {
+            window.location.href = "file:///C:/Users/HP/Desktop/Month%20Of%20Mern/Week-0-Challenge/webpages/adv_search.html";
+        }
+
     function search()
     {
         //The tbm=isch is the internal google search parameter that determines what kind of search to perform.

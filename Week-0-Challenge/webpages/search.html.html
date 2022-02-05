@@ -14,8 +14,8 @@
     <!-- Header Starts-->
     <div class="header">
         <div class="header__right">
-            <button>Images</button>
-            <button>Advanced Search</button>
+            <button onclick="button1()";>Images</button>
+            <button onclick="button2()";>Advanced Search</button>
         </div>
     </div>
     <!-- Header Ends -->
@@ -32,7 +32,7 @@
             </form>
         </div>
             <div class="search__buttons">
-                <button id="myBtn" type="submit" onclick="search()"; >Check Answer</button>
+                <button id="myBtn" type="submit" onclick="search()"; >Google Search</button>
              </div> 
             <!--  -->
     </div>
@@ -45,6 +45,16 @@
 
         var answ = document.querySelector('#ans');
         
+        function button1()
+        {
+            window.location.href = "file:///C:/Users/HP/Desktop/Month%20Of%20Mern/Week-0-Challenge/webpages/images.html";
+        }
+
+        function button2()
+        {
+            window.location.href = "file:///C:/Users/HP/Desktop/Month%20Of%20Mern/Week-0-Challenge/webpages/adv_search.html";
+        }
+
         function search()
         {
             url ='http://www.google.com/search?q=' + answ.value;
