@@ -10,8 +10,98 @@
 
 </head>
 <body>
-    <script type="text/javascript">
 
+    <!-- Header Starts-->
+    <div class="header">
+            <img src="C:\Users\HP\Desktop\Month Of Mern\Week-0-Challenge\assets\google.png" alt="Google Logo" >
+            <button onclick="button1()"; >Search</button>
+            <button onclick="button2()"; >Images</button>
+        </div>
+    </div>
+    <!-- Header Ends -->
+
+    <div class="red">
+        <p id="description">Advanced Search</p>
+    </div>
+
+    <!-- Container Starts -->
+    <div class="container">
+         
+        <div class="rows" >
+          <div class="labels">
+                <label for="fname"> All these words:</label>
+          </div>
+          <div class="fields">  
+            <form action="="https://www.google.com/search" method="get" target="_blank">
+                <input type="text" id="name" class="input-fields"></form>
+          </div>
+        </div>
+    
+        <div class="rows" >
+            <div class="labels">
+                <label for="fname"> This exact word or phrase:</label>
+            </div>
+            <div class="fields">  
+                <form action="="https://www.google.com/search" method="get" target="_blank">
+                <input type="text" id="name" class="input-fields"></form>
+            </div>
+        </div>
+    
+        <div class="rows" >
+            <div class="labels">
+                <label for="fname"> Any of these words:</label>
+            </div>
+            <div class="fields">  
+                <form action="="https://www.google.com/search" method="get" target="_blank">
+                <input type="text" id="name" class="input-fields"></form>
+            </div>
+        </div>
+
+        <div class="rows" >
+            <div class="labels">
+                <label for="fname"> None of these words:</label>
+            </div>
+            <div class="fields">  
+                <form action="="https://www.google.com/search" method="get" target="_blank">
+                <input type="text" id="name" class="input-fields"></form>
+            </div>
+        </div>
+
+        <button class="button" id="submit" type="submit" onclick="search()"; >Advanced Search</button>
+
+    </div>
+     <!-- Container Ends -->   
+
+
+    <script type="text/javascript">
+            var answ = document.querySelector('#name');
+
+            function button1()
+        {
+            window.location.href = "file:///C:/Users/HP/Desktop/Month%20Of%20Mern/Week-0-Challenge/webpages/search.html.html";
+        }
+
+        function button2()
+        {
+            window.location.href = "file:///C:/Users/HP/Desktop/Month%20Of%20Mern/Week-0-Challenge/webpages/images.html";
+        }
+
+        function search()
+        {
+            url ='http://www.google.com/search?q=' + answ.value;
+            window.open(url,'_blank');
+        }
+
+        var ev = document.createEvent('Event');
+        ev.initEvent('keypress');
+        ev.which = ev.keyCode = 13;
+        answ.dispatchEvent(ev);
+
+        answ.addEventListener('keypress', function(ev){
+        if(ev.keyCode === 13 || ev.which === 13){
+        search();
+    }
+    }); 
     </script>
 </body>
 </html>

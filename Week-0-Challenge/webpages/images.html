@@ -10,8 +10,62 @@
 
 </head>
 <body>
-    <script type="text/javascript">
 
+    <!-- Header Starts-->
+    <div class="header">
+        <div class="header__right">
+            <button>Search</button>
+            <button>Advanced Search</button>
+          </div>
+    </div>
+    <!-- Header Ends -->
+
+    <!-- Main Body Starts -->
+    <div class="mainBody">
+        <img src="C:\Users\HP\Desktop\Month Of Mern\Week-0-Challenge\assets\google-images.jfif" alt="Google Logo" class="center">
+
+      <!-- Search Starts -->
+      <div class="search">
+        <div class="searchy">
+            <form action="="http://google.com" method="get" target="_blank">
+                <input autocomplete="off" autofocus name="q" id="ans" placeholder="Search" type="text">
+            </form>
+        </div>
+            <div class="search__buttons">
+                <button id="myBtn" data-defaultToImageSearch="true" type="submit" onclick="search();">Google Images Search</button>
+             </div> 
+    </div>
+      <!-- Search Ends -->
+
+    </div>
+    <!-- Main Body Ends -->
+
+    <!-- JS Logic Starts-->
+    <script src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+    
+      var answ = document.querySelector('#ans');
+    
+    function search()
+    {
+        //The tbm=isch is the internal google search parameter that determines what kind of search to perform.
+        url ='http://www.google.com/search?q=' + answ.value +"&tbm=isch"; 
+        window.open(url,'_blank'); //.Image()
+    }
+
+    var ev = document.createEvent('Event');
+    ev.initEvent('keypress');
+    ev.which = ev.keyCode = 13;
+    answ.dispatchEvent(ev);
+
+    answ.addEventListener('keypress', function(ev){
+    if(ev.keyCode === 13 || ev.which === 13){
+    search();
+  }
+}); 
+
+     
     </script>
+    <!-- JS Logic Ends-->
 </body>
 </html>
